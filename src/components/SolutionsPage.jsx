@@ -555,6 +555,7 @@
 
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight, CheckCircle, Clock } from 'lucide-react';
+import TextType from './TextType';
 
 export default function SolutionsPage() {
     const [hoveredId, setHoveredId] = useState(null);
@@ -567,9 +568,26 @@ export default function SolutionsPage() {
             description: "A comprehensive quiz platform designed to engage users and track learning progress with real-time analytics and customizable assessments.",
             url: "https://quizzes.theniitettey.live",
             status: "live",
-            color: "#059669",
+            color: "#228B22",
             features: ["Real-time Analytics", "Custom Assessments", "Progress Tracking"],
-            image: "🎯"
+            image: (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-graduation-cap"
+                >
+                    <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                    <path d="M22 10v6" />
+                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+                </svg>
+            ),
         },
         {
             id: 2,
@@ -577,9 +595,27 @@ export default function SolutionsPage() {
             category: "Business Management",
             description: "All-in-one solution for managing your business operations, from team collaboration to project tracking and resource allocation.",
             status: "coming-soon",
-            color: "#4f46e5",
+            color: "green-500",
             features: ["Team Collaboration", "Project Tracking", "Resource Management"],
-            image: "⚡"
+            image: (
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-building2-icon lucide-building-2"
+                >
+                    <path d="M10 12h4" />
+                    <path d="M10 8h4" />
+                    <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                    <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+                    <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
+                </svg>
+            )
         },
         {
             id: 3,
@@ -587,9 +623,26 @@ export default function SolutionsPage() {
             category: "Automation & AI",
             description: "Leverage artificial intelligence to automate repetitive tasks, gain insights from your data, and boost productivity across your organization.",
             status: "coming-soon",
-            color: "#dc2626",
+            color: "",
             features: ["Task Automation", "Data Insights", "Smart Workflows"],
-            image: "🤖"
+            image: (
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-brain-cog-icon lucide-brain-cog">
+                    <path d="m10.852 14.772-.383.923" />
+                    <path d="m10.852 9.228-.383-.923" /><path d="m13.148 14.772.382.924" />
+                    <path d="m13.531 8.305-.383.923" /><path d="m14.772 10.852.923-.383" />
+                    <path d="m14.772 13.148.923.383" /><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771" />
+                    <path d="M17.998 5.125a4 4 0 0 1 2.525 5.771" />
+                    <path d="M19.505 10.294a4 4 0 0 1-1.5 7.706" /><path d="M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516" /><path d="M4.5 10.291A4 4 0 0 0 6 18" /><path d="M6.002 5.125a3 3 0 0 0 .4 1.375" /><path d="m9.228 10.852-.923-.383" /><path d="m9.228 13.148-.923.383" /><circle cx="12" cy="12" r="3" /></svg>
+            )
         }
     ];
 
@@ -602,10 +655,20 @@ export default function SolutionsPage() {
                         <p className="text-sm uppercase tracking-wider text-neutral-400 mb-4">
                             Our Solutions
                         </p>
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        {/* <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                             Powerful tools for modern teams
-                        </h1>
-                        <p className="text-xl text-neutral-300 leading-relaxed">
+                        </h1> */}
+
+
+                        <TextType
+                            text={["Powerful tools for modern teams", "We will prioritize you, all the time "]}
+                            typingSpeed={75}
+                            pauseDuration={1500}
+                            showCursor={true}
+                            cursorCharacter="|"
+                            className='text-5xl'
+                        />
+                        <p className="text-xl text-neutral-300 leading-relaxed mt-8">
                             We build platforms that solve real problems. Explore our suite of solutions designed to help you work better.
                         </p>
                     </div>
@@ -620,8 +683,8 @@ export default function SolutionsPage() {
                             <div
                                 key={solution.id}
                                 className={`group relative bg-white rounded-lg overflow-hidden transition-all duration-500 ${hoveredId === solution.id
-                                        ? 'shadow-2xl -translate-y-2'
-                                        : 'shadow-lg'
+                                    ? 'shadow-2xl -translate-y-2'
+                                    : 'shadow-lg'
                                     }`}
                                 onMouseEnter={() => setHoveredId(solution.id)}
                                 onMouseLeave={() => setHoveredId(null)}
@@ -662,7 +725,7 @@ export default function SolutionsPage() {
                                         style={{ color: solution.color }}>
                                         {solution.category}
                                     </p>
-                                    <h3 className="text-2xl font-bold text-neutral-900">
+                                    <h3 className="text-2xl tracking-tighter text-neutral-900">
                                         {solution.title}
                                     </h3>
                                 </div>
@@ -724,25 +787,6 @@ export default function SolutionsPage() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="bg-neutral-50 py-24 px-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-neutral-900 mb-6">
-                        Looking for something specific?
-                    </h2>
-                    <p className="text-lg text-neutral-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                        We specialize in building custom solutions tailored to your unique needs. Let's discuss how we can help bring your vision to life.
-                    </p>
-                    <a
-                        href="#"
-                        className="inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white font-semibold rounded-lg hover:bg-neutral-800 transition-all duration-300 hover:shadow-xl"
-                    >
-                        Schedule a Consultation
-                        <ArrowRight className="w-5 h-5" />
-                    </a>
                 </div>
             </div>
         </div>

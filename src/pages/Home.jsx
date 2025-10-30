@@ -3,8 +3,9 @@ import HeroSection from '../components/HeroSection'
 import Navbar from '../components/Navbar'
 import Services from '../components/Services'
 import SolutionsPage from '../components/SolutionsPage'
-import ContactForm from '../components/ContactForm'
-import AnimatedFooter from '../components/AnimatedFooter'
+import ContactForm from '../components/ContactSection'
+import AnimatedFooter from '../components/MinimalistFooter'
+import TechStackSection from '../components/TechStackSection'
 
 const Home = () => {
     return (
@@ -13,8 +14,10 @@ const Home = () => {
             <HeroSection />
             <Services />
             <SolutionsPage />
-            {/* <ContactForm /> */}
-            <AnimatedFooter/>
+            <TechStackSection />
+            <ContactForm/>
+            <AnimatedFooter />
+
         </>
     )
 }
