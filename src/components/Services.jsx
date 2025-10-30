@@ -4,7 +4,7 @@ const Services = () => {
     return (
         <>
             <div className='scroll-mt-16'>
-               <h1>Our Services</h1>
+               <h1>Our Servicess</h1>
             </div>
         </>
     )
