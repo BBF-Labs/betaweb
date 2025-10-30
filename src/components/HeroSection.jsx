@@ -6,11 +6,11 @@ const HeroSection = () => {
     <>
       <section className='scroll-mt-16 min-h-screen text-white bg-black flex items-center'>
         <div className='px-4 md:px-6 mx-auto text-center tracking-tighter'>
-          <h1 className='text-8xl'>
+          <h1 className='text-6xl md:text-8xl'>
             Transform Ideas Into <br />
             Digital Success
           </h1>
-          <h3 className='text-2xl font-extralight mt-8 text-gray-300'>
+          <h3 className='text-xl md:text-2xl font-extralight mt-8 text-gray-300'>
             We're your partner in product design, website creation, <br />
             and branding for every stage of your business.
           </h3>
